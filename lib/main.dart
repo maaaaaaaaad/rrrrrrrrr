@@ -38,6 +38,14 @@ class _MyHomePageState extends State<MyHomePage> {
     });
   }
 
+  void _dicrementCounter() {
+    setState(() {
+      if (_counter > 0) {
+        _counter--;
+      }
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -60,8 +68,8 @@ class _MyHomePageState extends State<MyHomePage> {
               TextButton(
                 style: TextButton.styleFrom(
                     textStyle: const TextStyle(fontSize: 20),
-                    backgroundColor: const Color(0xFF42A5F5)),
-                onPressed: () {},
+                    backgroundColor: const Color.fromARGB(31, 4, 45, 227)),
+                onPressed: _dicrementCounter,
                 child: const Text('-'),
               ),
               const SizedBox(height: 30),
