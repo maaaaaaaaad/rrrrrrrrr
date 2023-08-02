@@ -57,6 +57,14 @@ class _MyHomePageState extends State<MyHomePage> {
                 '$_counter',
                 style: Theme.of(context).textTheme.headlineMedium,
               ),
+              TextButton(
+                style: TextButton.styleFrom(
+                    textStyle: const TextStyle(fontSize: 20),
+                    backgroundColor: const Color(0xFF42A5F5)),
+                onPressed: () {},
+                child: const Text('-'),
+              ),
+              const SizedBox(height: 30),
             ],
           ),
         ),
