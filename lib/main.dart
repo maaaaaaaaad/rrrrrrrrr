@@ -30,14 +30,31 @@ class Look extends StatefulWidget {
 }
 
 class _Look extends State<Look> {
+  int _count = 0;
+
+  void _increment() {
+    setState(() {
+      _count++;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       body: Center(
           child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
-        children: <Widget>[Text("hello")],
+        children: <Widget>[const Text("hello"), Text('$_count')],
       )),
+      floatingActionButton: FloatingActionButton(
+        onPressed: _increment,
+        backgroundColor: const Color.fromARGB(255, 4, 133, 239),
+        child: const Icon(
+          Icons.add,
+          size: 22,
+          color: Colors.white,
+        ),
+      ),
     );
   }
 }
