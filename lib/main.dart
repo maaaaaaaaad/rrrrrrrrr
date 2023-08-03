@@ -38,13 +38,32 @@ class _Look extends State<Look> {
     });
   }
 
+  void _decrement() {
+    if (_count > 0) {
+      setState(() {
+        _count--;
+      });
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
           child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
-        children: <Widget>[const Text("hello"), Text('$_count')],
+        children: <Widget>[
+          const Text("hello"),
+          Text('$_count'),
+          TextButton(
+              style: TextButton.styleFrom(backgroundColor: Colors.blue),
+              onPressed: _decrement,
+              child: const Text(
+                '-',
+                style:
+                    TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+              ))
+        ],
       )),
       floatingActionButton: FloatingActionButton(
         onPressed: _increment,
