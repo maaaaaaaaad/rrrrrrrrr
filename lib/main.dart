@@ -49,32 +49,60 @@ class _Look extends State<Look> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-          child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: <Widget>[
-          const Text("hello"),
-          Text('$_count'),
-          TextButton(
-              style: TextButton.styleFrom(backgroundColor: Colors.blue),
-              onPressed: _decrement,
-              child: const Text(
-                '-',
-                style:
-                    TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
-              ))
-        ],
-      )),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _increment,
-        backgroundColor: const Color.fromARGB(255, 4, 133, 239),
-        child: const Icon(
-          Icons.add,
-          size: 22,
-          color: Colors.white,
+        appBar: AppBar(
+            centerTitle: true,
+            title: const Text("MAD", style: TextStyle(color: Colors.white)),
+            backgroundColor: const Color.fromARGB(255, 4, 133, 239)),
+        body: Center(
+            child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            const Text("hello"),
+            Text('$_count'),
+            TextButton(
+                style: TextButton.styleFrom(backgroundColor: Colors.blue),
+                onPressed: _decrement,
+                child: const Text(
+                  '-',
+                  style: TextStyle(
+                      color: Colors.white, fontWeight: FontWeight.bold),
+                ))
+          ],
+        )),
+        floatingActionButton: FloatingActionButton(
+          onPressed: _increment,
+          backgroundColor: const Color.fromARGB(255, 4, 133, 239),
+          child: const Icon(
+            Icons.add,
+            size: 22,
+            color: Colors.white,
+          ),
         ),
-      ),
-    );
+        drawer: Drawer(
+          child: ListView(
+            padding: EdgeInsets.zero,
+            children: [
+              const DrawerHeader(
+                decoration: BoxDecoration(
+                  color: Colors.blue,
+                ),
+                child: Text('Drawer Header'),
+              ),
+              ListTile(
+                title: const Text('Item 1'),
+                onTap: () {
+                  // ...
+                },
+              ),
+              ListTile(
+                title: const Text('Item 2'),
+                onTap: () {
+                  // ...
+                },
+              ),
+            ],
+          ),
+        ));
   }
 }
 
