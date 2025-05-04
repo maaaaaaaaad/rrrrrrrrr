@@ -1,0 +1,3 @@
+/Users/mad/Desktop/dev/c-tactics/cmake-build-debug/CMakeFiles/c_tactics.dir
+/Users/mad/Desktop/dev/c-tactics/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/mad/Desktop/dev/c-tactics/cmake-build-debug/CMakeFiles/rebuild_cache.dir
