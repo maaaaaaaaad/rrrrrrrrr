@@ -8,7 +8,7 @@ int main(void) {
 
     arr_ptr_sec++;
 
-    printf("first arr index: %d\n", *arr_ptr_fir);
-    printf("second arr index: %d\n", *arr_ptr_sec);
+    printf("first arr index: %d\n", *arr_ptr_fir); //result: 1
+    printf("second arr index: %d\n", *arr_ptr_sec); //result: 2
     return 0;
 }
